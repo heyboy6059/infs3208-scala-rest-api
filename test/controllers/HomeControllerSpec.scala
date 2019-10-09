@@ -5,9 +5,6 @@ import org.scalatestplus.play.guice._
 import play.api.test._
 import play.api.test.Helpers._
 
-/**
- https://www.playframework.com/documentation/latest/ScalaTestingWithScalaTest
- */
 class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting {
 
   "HomeController GET" should {
@@ -18,7 +15,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Smart Bikers")
     }
 
     "render the index page from the application" in {
@@ -27,7 +24,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Smart Bikers")
     }
 
     "render the index page from the router" in {
@@ -36,7 +33,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Smart Bikers")
     }
   }
 }
